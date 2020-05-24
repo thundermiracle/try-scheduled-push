@@ -1,5 +1,7 @@
 # try-scheduled-push
 
+[![Build Status](https://travis-ci.org/thundermiracle/try-scheduled-push.svg?branch=master)](https://travis-ci.org/thundermiracle/try-scheduled-push)
+
 A try of Push Notification's experimental function -- Scheduled Trigger.
 
 ## Screenshot
