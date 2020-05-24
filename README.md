@@ -2,6 +2,10 @@
 
 A try of Push Notification's experimental function -- Scheduled Trigger.
 
+## Screenshot
+
+![push-notification.png](./screenshots/push-notification.png)
+
 ## Requirements
 
 1. 現時点（2020.05.22）試験運用版なので、chromeで下記の機能を有効にする必要がある。
