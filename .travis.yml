@@ -5,6 +5,7 @@ node_js:
 script:
 - echo "npm test temporarily disabled"
 before_deploy:
+  - sed -i -- 's/openWindow("\/")/openWindow("\/try-scheduled-push")/' ./src/sw.js
   - cp -rf ./src ./public/
   - echo '' > ./public/.nojekyll
 deploy:
