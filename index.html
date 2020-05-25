@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>scheduled push notification</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="initial-scale=1, minimum-scale=1, width=device-width, shrink-to-fit=no" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light shadow-sm mb-5">
+    <a class="navbar-brand" href="#">
+      <img src="./assets/icon.png" width="30" height="30" class="d-inline-block align-top" alt=""
+        loading="lazy">
+      Scheduled Push Notification
+    </a>
+    <a href="https://github.com/thundermiracle/try-scheduled-push" type="button" class="btn btn-link">Github</a>
+  </nav>
+  <div class="container my-3">
+    <div class="form-row">
+      <div class="form-group col-md-8">
+        <label for="todoName">Todo</label>
+        <input id="todoName" type="text" class="form-control" placeholder="input your todo" required />
+      </div>
+      <div class="form-group col-md-2">
+        <label for="todoTime">Time</label>
+        <input id="todoTime" type="time" step="1" class="form-control" placeholder="time" required />
+      </div>
+      <div class="form-group col-md-2">
+        <label for="addTodo">　</label>
+        <button id="addTodo" type="button" class="btn btn-primary d-block">Add</button>
+      </div>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Todo Name</th>
+          <th scope="col">Todo Time</th>
+        </tr>
+      </thead>
+      <tbody id="tBody"></tbody>
+    </table>
+
+    <div id="error-msg" class="toast" style="position: absolute; top: 50px; right: 10px;" data-delay="2000">
+      <div class="toast-header bg-danger text-light">
+        <strong class="mr-auto ">Error</strong>
+        <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">
+      </div>
+    </div>
+
+    <div id="info-msg" class="toast" style="position: absolute; top: 50px; right: 10px;" data-delay="2000">
+      <div class="toast-header bg-success text-light">
+        <strong class="mr-auto ">Info</strong>
+        <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="toast-body">
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.30.1/date_fns.min.js"
+    integrity="sha256-wCBClaCr6pJ7sGU5kfb3gQMOOcIZNzaWpWcj/lD9Vfk=" crossorigin="anonymous"></script>
+  <script src="./app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+  </script>
+</body>
+
+</html>
